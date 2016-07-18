@@ -17,7 +17,7 @@
             var hash = window.location.hash;
             if (hash === '') {
               //alert('Back button was pressed.');
-              location.reload(true);
+              location.reload(false);
             }
           }
         });
@@ -29,8 +29,7 @@
 
 
     function lala() {
-
-        document.body.innerHTML = "<button type=\x22submit\x22 onclick=\x22javascript:location.href='https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=en'\x22><img src=\x22http://s35.podbean.com/pb/89d7273bc6ae276b8927b6cad83ab32e/578cfa0c/data2/blogs60/771188/uploads/googlePlay-logo.png\x22 alt=\x22Submit\x22></button><div><span id=\x22time\x22></span></div>";
+        document.body.innerHTML = "<button width=\x22150%\x22 type=\x22submit\x22 onclick=\x22javascript:location.href='https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=en'\x22><img src=\x22http://s35.podbean.com/pb/89d7273bc6ae276b8927b6cad83ab32e/578cfa0c/data2/blogs60/771188/uploads/googlePlay-logo.png\x22 style=\x22height:200px;width:200px\x22 alt=\x22Submit\x22></button><div><span id=\x22time\x22></span></div>";
 
         isVibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
         if (isVibrate) {
