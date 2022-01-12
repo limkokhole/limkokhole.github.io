@@ -14,9 +14,9 @@ img.src = "Con.jpg";
 div.appendChild(img);
 img.src = "COn.jpg";
 div.appendChild(img);
-img.src = "CnO.jpg";
+img.src = "CoN.jpg";
 div.appendChild(img);
-img.src = "CNO.jpg";
+img.src = "CON.jpg";
 div.appendChild(img);
 
 
