@@ -1,5 +1,5 @@
 var img = document.createElement("img");
-img.src = "lala.jpeg";
+img.src = "con.jpg";
 
 var div = document.getElementById("x");
 div.appendChild(img);
