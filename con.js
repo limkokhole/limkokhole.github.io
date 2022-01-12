@@ -1,9 +1,11 @@
-var img = document.createElement("img");
+let img = document.createElement("img");
 let div = document.getElementById("x");
 img.src = "con.jpg";
 div.appendChild(img);
-img.src = "cOn.jpg";
-div.appendChild(img);
+
+let img2 = document.createElement("img");
+img2.src = "cOn.jpg";
+div.appendChild(img2);
 img.src = "cON.jpg";
 div.appendChild(img);
 img.src = "coN.jpg";
